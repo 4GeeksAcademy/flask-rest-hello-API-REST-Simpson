@@ -9,9 +9,12 @@ from flask_cors import CORS
 from utils import APIException, generate_sitemap
 from admin import setup_admin
 from models import db, User,Characters,Location
+from routes import api
 #from models import Person
 
 app = Flask(__name__)
+
+app.register_blueprint(api)
 app.url_map.strict_slashes = False
 
 db_url = os.getenv("DATABASE_URL")

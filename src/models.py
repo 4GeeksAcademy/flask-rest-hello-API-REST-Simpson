@@ -11,7 +11,8 @@ db = SQLAlchemy(model_class = Base) #para conectar con el appy gestionar la base
 
 #En caso de que la tabla se llame diferente el nombre de la clase colocar >>" __tablename__ = 'users'"
 
-# TABLA INTERMEDIA PARA NO GENERAR OTRO MODELO
+# TABLA INTERMEDIA PARA NO GENERAR OTRO MODELO,además las tablas intermedias
+# existen porque la relación es de muchos a muchos
 
 
 favorites_table_characters = Table(
